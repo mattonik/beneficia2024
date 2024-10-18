@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Think';
+    src: url('/fonts/Think-Regular.woff2') format('woff2'),
+        url('/fonts/Think-Regular.woff') format('woff'),
+        url('/fonts/Think-Regular.svg#Think-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+a {
+    @apply cursor-pointer;
+}
+
+.jedalny-listok {
+    @apply relative my-24;
+}
+
+.jedalny-listok:after {
+    @apply bg-no-repeat bg-center bg-contain w-full h-full drop-shadow-beneficia;
+    content: ' ';
+    display: block;
+    background-image: url('/images/1x/tanier.png');
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.papier {
+    @apply relative top-1/2 z-10 bg-white text-beneficia2024-950 max-w-xl mx-auto text-6xl font-think px-14 py-24 text-center shadow-beneficia -rotate-3
+}
+
+.papier:after {
+    @apply bg-no-repeat bg-center bg-contain w-96 aspect-square;
+    content: ' ';
+    display: block;
+    background-image: url('/images/0.5x/losos@0.5x.png');
+    z-index: 20;
+    position: absolute;
+    left: -14rem;
+    top: 34%;
+}
+
+main {
+    @apply relative;
+}
+
+main:after {
+    @apply bg-no-repeat bg-center bg-contain w-52 aspect-square;
+    content: ' ';
+    display: block;
+    background-image: url('/images/0.5x/vajce@0.5x.png');
+    z-index: 20;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+}

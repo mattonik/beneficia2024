@@ -1,0 +1,25 @@
+{
+  "name": "kordos-beneficia-2024",
+  "version": "0.0.1",
+  "description": "Stránka pre benefičnú večeru 2024",
+  "author": "Martin Puškáč (https://icebear.sk)",
+  "maintainers": [
+    "Martin Puškáč (https://icebear.sk)"
+  ],
+  "scripts": {
+    "clean": "rimraf public/*",
+    "browsersync": "browser-sync start --server ./public --files ./public/* --startPath index.html --port 3001",
+    "dev-templates": "pug --pretty -o public/ src/pug --watch",
+    "dev-tailwind": "tailwindcss -i ./src/tailwind/tailwind.css -c ./src/tailwind/tailwind.config.js -o ./public/style.css --watch",
+    "watch": "npm run dev-templates & npm run dev-tailwind & npm run browsersync"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "pug-cli": "^1.0.0-alpha6",
+    "rimraf": "^6.0.1",
+    "tailwindcss": "^3.4.14"
+  },
+  "dependencies": {
+    "pug": "^3.0.3"
+  }
+}
