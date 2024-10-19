@@ -13,51 +13,175 @@
     font-display: swap;
 }
 
+html {
+    @apply scroll-smooth;
+}
+
+body {
+    @apply bg-body text-beneficia2024-900 antialiased text-pretty;
+}
+
 a {
     @apply cursor-pointer;
 }
 
-.jedalny-listok {
-    @apply relative my-24;
+h1 {
+    @apply text-4xl tracking-tight text-white;
 }
 
-.jedalny-listok:after {
-    @apply bg-no-repeat bg-center bg-contain w-full h-full drop-shadow-beneficia;
-    content: ' ';
-    display: block;
-    background-image: url('/images/1x/tanier.png');
-    z-index: 1;
-    position: absolute;
-    left: 0;
-    top: 0;
+.nav-container {
+    @apply hidden;
 }
 
 .papier {
-    @apply relative top-1/2 z-10 bg-white text-beneficia2024-950 max-w-xl mx-auto text-6xl font-think px-14 py-24 text-center shadow-beneficia -rotate-3
+    @apply bg-white text-beneficia2024-950 mx-12 mt-8 text-4xl font-think px-6 py-16 text-center shadow-beneficia -rotate-3
 }
 
-.papier:after {
-    @apply bg-no-repeat bg-center bg-contain w-96 aspect-square;
-    content: ' ';
-    display: block;
-    background-image: url('/images/0.5x/losos@0.5x.png');
-    z-index: 20;
-    position: absolute;
-    left: -14rem;
-    top: 34%;
+.papier dl dt {
+    @apply text-4xl mt-12;
+}
+
+.papier dl dt:first-child {
+    @apply mt-0;
+}
+
+.papier dl dd {
+    @apply text-5xl break-words;
 }
 
 main {
     @apply relative;
 }
 
-main:after {
-    @apply bg-no-repeat bg-center bg-contain w-52 aspect-square;
-    content: ' ';
-    display: block;
-    background-image: url('/images/0.5x/vajce@0.5x.png');
-    z-index: 20;
-    position: absolute;
-    right: 5%;
-    top: 20%;
+.buy-large {
+    @apply inline-block bg-white text-6xl px-32 py-8 -rotate-3 shadow-beneficia cursor-pointer;
+}
+
+.more-info {
+    @apply px-4
+}
+
+footer {
+    @apply px-4;
+}
+
+header h2 {
+    @apply text-4xl max-w-4xl mt-16 mx-auto px-4;
+}
+
+header h4 {
+    @apply text-4xl text-white mt-16;
+}
+
+header a {
+    @apply text-5xl transition-colors;
+}
+
+header a:hover {
+    @apply text-beneficia2024-950;
+}
+
+@media screen(md) {
+    .nav-container {
+        @apply block bg-body sticky top-0 z-30;
+    }
+
+    .nav-container nav {
+        @apply max-w-6xl mx-auto my-4 border-b-2 border-beneficia2024-200 flex justify-between font-think text-xl text-white items-center;
+    }
+
+    .nav-container nav a {
+        @apply transition-colors p-4;
+    }
+
+    .nav-container nav a:hover {
+        @apply text-gray-100;
+    }
+
+    header h2 {
+        @apply text-5xl px-0 mt-24;
+    }
+
+    header h4 {
+        @apply text-5xl mt-24;
+    }
+
+    header a {
+        @apply text-6xl;
+    }
+
+    .papier {
+        @apply max-w-xl text-6xl px-14 py-24 mx-auto
+    }
+
+        .papier dl dt {
+            @apply text-5xl mt-16;
+        }
+
+        .papier dl dd {
+            @apply text-6xl;
+        }
+}
+
+@media screen(lg) {
+    h1 {
+        @apply text-8xl;
+    }
+
+    .jedalny-listok {
+        @apply relative my-24;
+    }
+
+    .jedalny-listok:after {
+        @apply bg-no-repeat bg-center bg-contain w-full h-full drop-shadow-beneficia;
+        content: ' ';
+        display: block;
+        background-image: url('/images/1x/tanier.png');
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .papier {
+        @apply relative top-1/2 z-10;
+    }
+
+    .papier:after {
+        @apply bg-no-repeat bg-center bg-contain w-96 aspect-square;
+        content: ' ';
+        display: block;
+        background-image: url('/images/0.5x/losos@0.5x.png');
+        z-index: 20;
+        position: absolute;
+        left: -14rem;
+        top: 34%;
+    }
+
+    main:after {
+        @apply bg-no-repeat bg-center bg-contain w-52 aspect-square;
+        content: ' ';
+        display: block;
+        background-image: url('/images/0.5x/vajce@0.5x.png');
+        z-index: 20;
+        position: absolute;
+        right: 5%;
+        top: 20%;
+    }
+
+    .buy-large {
+        @apply transition-all scale-95;
+    }
+
+    .buy-large:hover {
+        @apply scale-100;
+    }
+
+    .more-info {
+        @apply px-0;
+    }
+
+    footer {
+        @apply px-0;
+    }
 }
