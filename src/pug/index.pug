@@ -100,16 +100,23 @@ html(lang="sk")
                 p.mt-4.mb-12 Zamestnanci, zamestnankyne aj dobrovoľníčky a&nbsp;dobrovoľníci z&nbsp;organizácie sa v&nbsp;nocľahárňach i&nbsp;v&nbsp;teréne starajú o&nbsp;tisícky ľudí bez domova v&nbsp;našom hlavnom meste.
 
                 h3.text-2xl Ročník 2023
-                <iframe loading="lazy" class="w-full aspect-video mt-4 mb-12" src="https://www.youtube.com/embed/SIMvwfovkdQ?si=UfuiBF_6VUf83-_p" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="w-full aspect-video mt-4 mb-12" data-src="https://www.youtube.com/embed/SIMvwfovkdQ?si=UfuiBF_6VUf83-_p" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 
                 h3.text-2xl Vďaka týmto partnerom môže ísť 100 % sumy z&nbsp;vášho lístka organizácii 
                     a(href="https://depaul.sk", title="Webová stránka n.o. Depaul, ktorá pomáha ľuďom bez domova", class="transition-colors hover:text-beneficia2024-950") Depaul Slovensko
                 p.mt-4 Ak by ste sa chceli aj vy stať partnerom, napíšte nám na email XXX
 
         footer.max-w-2xl.mx-auto.my-8.font-think.flex.justify-between
-            span &copy; 2024 
+            span &copy; #{new Date().getFullYear()} 
                 a(href="https://kordos.sk", title="Webová stránka osobného šéfkuchára Michala Kordoša", class="transition-colors hover:text-beneficia2024-950") Michal Kordoš
 
             span Web pripravil 
                 a(href="https://icebear.sk", title="Webová stránka IceBear - Martin Puškáč", class="transition-colors hover:text-beneficia2024-950") Martin Puškáč
+
+        script.
+            const yt = document.getElementsByTagName('iframe');
+            window.addEventListener("load", (e) => {
+                console.log('Page is fully loaded');
+                if(yt[0].getAttribute('data-src')) yt[0].setAttribute('src', yt[0].getAttribute('data-src'));
+            });
             
