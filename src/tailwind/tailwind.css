@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    @apply bg-body text-beneficia2024-900 antialiased text-pretty;
+    @apply antialiased bg-body text-beneficia2024-900 text-pretty;
 }
 
 a {
@@ -38,7 +38,7 @@ h1 {
 }
 
 .papier dl dt {
-    @apply text-4xl mt-12;
+    @apply mt-12 text-4xl;
 }
 
 .papier dl dt:first-child {
@@ -54,7 +54,7 @@ main {
 }
 
 .buy-large {
-    @apply inline-block bg-white text-6xl px-32 py-8 -rotate-3 shadow-beneficia cursor-pointer;
+    @apply inline-block px-32 py-8 text-6xl bg-white cursor-pointer -rotate-3 shadow-beneficia;
 }
 
 .more-info {
@@ -66,11 +66,11 @@ footer {
 }
 
 header h2 {
-    @apply text-4xl max-w-4xl mt-16 mx-auto px-4;
+    @apply max-w-4xl px-4 mx-auto mt-16 text-4xl;
 }
 
 header h4 {
-    @apply text-4xl text-white mt-16;
+    @apply mt-16 text-4xl text-white;
 }
 
 header a {
@@ -83,15 +83,15 @@ header a:hover {
 
 @media screen(md) {
     .nav-container {
-        @apply block bg-body sticky top-0 z-30;
+        @apply sticky top-0 z-30 block bg-body;
     }
 
     .nav-container nav {
-        @apply max-w-6xl mx-auto my-4 border-b-2 border-beneficia2024-200 flex justify-between font-think text-xl text-white items-center;
+        @apply flex items-center justify-between max-w-6xl mx-auto my-4 text-xl text-white border-b-2 border-beneficia2024-200 font-think;
     }
 
     .nav-container nav a {
-        @apply transition-colors p-4;
+        @apply p-4 transition-colors;
     }
 
     .nav-container nav a:hover {
@@ -99,11 +99,11 @@ header a:hover {
     }
 
     header h2 {
-        @apply text-5xl px-0 mt-24;
+        @apply px-0 mt-24 text-5xl;
     }
 
     header h4 {
-        @apply text-5xl mt-24;
+        @apply mt-24 text-5xl;
     }
 
     header a {
@@ -111,11 +111,11 @@ header a:hover {
     }
 
     .papier {
-        @apply max-w-xl text-6xl px-14 py-24 mx-auto
+        @apply max-w-2xl text-6xl px-14 py-24 mx-auto
     }
 
         .papier dl dt {
-            @apply text-5xl mt-16;
+            @apply mt-16 text-5xl;
         }
 
         .papier dl dd {
@@ -133,7 +133,7 @@ header a:hover {
     }
 
     .jedalny-listok:after {
-        @apply bg-no-repeat bg-center bg-contain w-full h-full drop-shadow-beneficia;
+        @apply w-full h-full bg-center bg-no-repeat bg-contain drop-shadow-beneficia;
         content: ' ';
         display: block;
         background-image: url('/images/1x/tanier.png');
@@ -144,29 +144,29 @@ header a:hover {
     }
 
     .papier {
-        @apply relative top-1/2 z-10;
+        @apply relative z-10 max-w-3xl mx-auto top-1/2;
     }
 
     .papier:after {
-        @apply bg-no-repeat bg-center bg-contain w-96 aspect-square;
+        @apply bg-center bg-no-repeat bg-contain w-96 aspect-square;
         content: ' ';
         display: block;
         background-image: url('/images/0.5x/losos@0.5x.png');
         z-index: 20;
         position: absolute;
-        left: -14rem;
+        left: -18rem;
         top: 34%;
     }
 
     main:after {
-        @apply bg-no-repeat bg-center bg-contain w-52 aspect-square;
+        @apply bg-center bg-no-repeat bg-contain w-52 aspect-square;
         content: ' ';
         display: block;
         background-image: url('/images/0.5x/vajce@0.5x.png');
         z-index: 20;
         position: absolute;
-        right: 5%;
-        top: 20%;
+        right: 15%;
+        top: 5%;
     }
 
     .buy-large {
