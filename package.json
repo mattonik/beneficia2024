@@ -14,7 +14,7 @@
     "watch": "npm run dev-templates & npm run dev-tailwind & npm run browsersync",
     "build-templates": "pug -o public/ src/pug",
     "build-tailwind": "tailwindcss -i ./src/tailwind/tailwind.css -c ./src/tailwind/tailwind.config.js -o ./public/style.css --minify",
-    "build": "npm run clean && npm run build-templates && npm run build-tailwind"
+    "build": "npm run build-templates && npm run build-tailwind"
   },
   "devDependencies": {
     "browser-sync": "^3.0.3",
