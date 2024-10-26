@@ -7,7 +7,6 @@
     "Martin Puškáč (https://icebear.sk)"
   ],
   "scripts": {
-    "clean": "rimraf public/*.{html,css,js}",
     "browsersync": "browser-sync start --server ./public --files ./public/* --startPath index.html --port 3001",
     "dev-templates": "pug --pretty -o public/ src/pug --watch",
     "dev-tailwind": "tailwindcss -i ./src/tailwind/tailwind.css -c ./src/tailwind/tailwind.config.js -o ./public/style.css --watch",
@@ -19,7 +18,6 @@
   "devDependencies": {
     "browser-sync": "^3.0.3",
     "pug-cli": "^1.0.0-alpha6",
-    "rimraf": "^6.0.1",
     "tailwindcss": "^3.4.14"
   },
   "dependencies": {
