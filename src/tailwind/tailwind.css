@@ -5,9 +5,9 @@
 
 @font-face {
     font-family: 'Think';
-    src: url('/fonts/Think-Regular.woff2') format('woff2'),
-        url('/fonts/Think-Regular.woff') format('woff'),
-        url('/fonts/Think-Regular.svg#Think-Regular') format('svg');
+    src: url('./fonts/Think-Regular.woff2') format('woff2'),
+        url('./fonts/Think-Regular.woff') format('woff'),
+        url('./fonts/Think-Regular.svg#Think-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -136,7 +136,7 @@ header a:hover {
         @apply w-full h-full bg-center bg-no-repeat bg-contain drop-shadow-beneficia;
         content: ' ';
         display: block;
-        background-image: url('/images/1x/tanier.png');
+        background-image: url('./images/1x/tanier.png');
         z-index: 1;
         position: absolute;
         left: 0;
@@ -151,7 +151,7 @@ header a:hover {
         @apply bg-center bg-no-repeat bg-contain w-96 aspect-square;
         content: ' ';
         display: block;
-        background-image: url('/images/0.5x/losos@0.5x.png');
+        background-image: url('./images/0.5x/losos@0.5x.png');
         z-index: 20;
         position: absolute;
         left: -18rem;
@@ -162,7 +162,7 @@ header a:hover {
         @apply bg-center bg-no-repeat bg-contain w-52 aspect-square;
         content: ' ';
         display: block;
-        background-image: url('/images/0.5x/vajce@0.5x.png');
+        background-image: url('./images/0.5x/vajce@0.5x.png');
         z-index: 20;
         position: absolute;
         right: 15%;
