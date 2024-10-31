@@ -34,11 +34,11 @@ h1 {
 }
 
 .papier {
-    @apply bg-white text-beneficia2024-950 mx-12 mt-8 text-4xl font-think px-6 py-16 text-center shadow-beneficia -rotate-3
+    @apply bg-white text-beneficia2024-950 mx-4 mt-8 text-2xl font-think px-4 py-12 text-center shadow-beneficia -rotate-3
 }
 
 .papier dl dt {
-    @apply mt-12 text-4xl;
+    @apply mt-6 text-2xl;
 }
 
 .papier dl dt:first-child {
@@ -46,7 +46,7 @@ h1 {
 }
 
 .papier dl dd {
-    @apply text-5xl break-words;
+    @apply text-3xl break-words;
 }
 
 main {
@@ -111,16 +111,27 @@ header a:hover {
     }
 
     .papier {
-        @apply max-w-2xl text-6xl px-14 py-24 mx-auto
+        @apply max-w-2xl text-4xl px-14 py-24 mx-auto
     }
 
         .papier dl dt {
-            @apply mt-16 text-5xl;
+            @apply mt-16 text-4xl;
         }
 
         .papier dl dd {
-            @apply text-6xl;
+            @apply text-5xl;
         }
+
+    main:after {
+        @apply bg-center bg-no-repeat bg-contain w-52 aspect-square;
+        content: ' ';
+        display: block;
+        background-image: url('./images/0.5x/vajce@0.5x.png');
+        z-index: 20;
+        position: absolute;
+        right: 5%;
+        top: 5%;
+    }
 }
 
 @media screen(lg) {
@@ -144,8 +155,16 @@ header a:hover {
     }
 
     .papier {
-        @apply relative z-10 max-w-3xl mx-auto top-1/2;
+        @apply relative z-10 max-w-3xl mx-auto text-6xl top-1/2;
     }
+
+        .papier dl dt {
+            @apply text-5xl;
+        }
+
+        .papier dl dd {
+            @apply text-6xl;
+        }
 
     .papier:after {
         @apply bg-center bg-no-repeat bg-contain w-96 aspect-square;
@@ -159,14 +178,7 @@ header a:hover {
     }
 
     main:after {
-        @apply bg-center bg-no-repeat bg-contain w-52 aspect-square;
-        content: ' ';
-        display: block;
-        background-image: url('./images/0.5x/vajce@0.5x.png');
-        z-index: 20;
-        position: absolute;
         right: 15%;
-        top: 5%;
     }
 
     .buy-large {
